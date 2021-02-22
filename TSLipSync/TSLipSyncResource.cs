@@ -166,9 +166,14 @@ namespace TSLipSync
             await _teamspeakQueryClient.Send("login", new Parameter("client_login_name", TeamspeakUsername), new Parameter("client_login_password", TeamspeakPassword));
             await _teamspeakQueryClient.Send("use", new Parameter("port", TeamspeakPort));
 
+            String channelId = "";
+
             if (_teamspeakQueryClient.IsConnected)
             {
                 Alt.Log("Successfully connected to Teamspeak.");
+
+                var channel = await _teamspeakQueryClient.Send("channelfind", new Parameter("pattern", TeamspeakChannel));
+                channelId = channel.First()["cid"].ToString();
             }
 
             while (_teamspeakQueryClient.IsConnected)
@@ -176,10 +181,6 @@ namespace TSLipSync
                 try
                 {
                     List<String> talkingClients = new List<String>();
-
-                    var channel = await _teamspeakQueryClient.Send("channelfind", new Parameter("pattern", TeamspeakChannel));
-                    String channelId = channel.First()["cid"].ToString();
-
                     var clientList = await _teamspeakQueryClient.Send("clientlist", new Parameter("-voice", ""));
 
                     foreach (var client in clientList)
@@ -270,7 +271,7 @@ namespace TSLipSync
                         await Task.CompletedTask;
                     }));
 
-                    Thread.Sleep(CheckIntervalInMs);
+                    await Task.Delay(CheckIntervalInMs);
                 }
                 catch (Exception e)
                 {
