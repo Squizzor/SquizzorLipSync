@@ -38,9 +38,3 @@ alt.onServer('tslipsync:onStopTalking', (playerId) => {
         natives.playFacialAnim(scriptId, 'mood_normal_1', animationName);
     }
 });
-
-alt.on("keyup", function (key) {
-    if (key == 33) {
-        alt.emitServer('tslipsync:identifierTransmission', 'HerrSChlotzen');
-    }
-});

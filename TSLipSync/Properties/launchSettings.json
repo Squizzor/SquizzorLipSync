@@ -1,9 +1,7 @@
 {
   "profiles": {
     "TSLipSync": {
-      "commandName": "Executable",
-      "executablePath": "D:\\GTAV\\altv-server\\altv-server.exe",
-      "workingDirectory": "D:\\GTAV\\altv-server"
+      "commandName": "Project"
     }
   }
 }
