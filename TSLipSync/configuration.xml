@@ -1,0 +1,13 @@
+<configuration>
+	<TeamspeakQueryAddress>127.0.0.1</TeamspeakQueryAddress>
+	<TeamspeakQueryPort>10011</TeamspeakQueryPort>
+	<TeamspeakPort>9987</TeamspeakPort>
+	<TeamspeakUsername>admin</TeamspeakUsername>
+	<TeamspeakPassword>+iim0YKQ</TeamspeakPassword>
+	<TeamspeakChannel>Ingame</TeamspeakChannel>
+	<TeamspeakClientPropertyToCheck>client_nickname</TeamspeakClientPropertyToCheck>
+	<DecodeClientPropertyWithBase64>true</DecodeClientPropertyWithBase64>
+	<StripSpacesInClientProperty>true</StripSpacesInClientProperty>
+	<CheckIntervalInMs>500</CheckIntervalInMs>
+	<SynchronisationRangeInM>10</SynchronisationRangeInM>
+</configuration>
