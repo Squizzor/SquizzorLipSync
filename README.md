@@ -39,7 +39,7 @@ Now when you have the name "John Doe" in your players meta data (TsLipSyncIdenti
 ## How to use
 
 ### Basic Setup
-Copy the SquizzorLipSync folder to your server resources folder and add SquizzorLipSync to the resources section in your server.cfg.
+Create a folder with a name of your choice (e.g. TsLipSync) in your servers resources folder. Then copy all the compiled output into it and add the folder name to the resources section in your server.cfg.
 
 Since this is a C# resource, you'll have to make sure that you have all the necessary modules in your server root and modules folder (you can get them on the alt:V download page, when you check the "C# module" box).
 
