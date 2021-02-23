@@ -56,8 +56,7 @@ The Teamspeak channel that will be checked for talking clients.
 This is the Teamspeak client property that will be compared to the specified players identification key ("TsLipSyncIdentifier"). Possible values are for example "client_nickname" or "client_description". See Teamspeak documentation for more possible values.
 
 ##### DecodeClientPropertyWithBase64 #####
-If this is set to true the value of the Teamspeak client property will be decoded with Base64 before it will be compared to the players identification key.
-This is especially useful in combination with the Teamspeak GTA5Voice plugin, which always changes your Teamspeak nickname to the Base64 encoded version of the key which you passed to it.
+If this is set to true the value of the Teamspeak client property will be **decoded** with Base64 before it will be compared to the players identification key.
 
 ##### StripSpacesInClientProperty #####
 If this is set to true all spaces in the value of the Teamspeak client property will be stripped out. If **DecodeClientPropertyWithBase64** is also active, the spaces will be stripped out after decoding. 
