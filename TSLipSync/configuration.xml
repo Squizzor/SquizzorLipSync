@@ -2,8 +2,8 @@
 	<TeamspeakQueryAddress>127.0.0.1</TeamspeakQueryAddress>
 	<TeamspeakQueryPort>10011</TeamspeakQueryPort>
 	<TeamspeakPort>9987</TeamspeakPort>
-	<TeamspeakUsername>admin</TeamspeakUsername>
-	<TeamspeakPassword>+iim0YKQ</TeamspeakPassword>
+	<TeamspeakUsername>queryadmin</TeamspeakUsername>
+	<TeamspeakPassword>password</TeamspeakPassword>
 	<TeamspeakChannel>Ingame</TeamspeakChannel>
 	<TeamspeakClientPropertyToCheck>client_nickname</TeamspeakClientPropertyToCheck>
 	<CheckIntervalInMs>500</CheckIntervalInMs>
