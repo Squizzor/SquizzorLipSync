@@ -74,3 +74,6 @@ WARNING: This is not necessary, if you already set the identification key on the
 To set the identification key on client side just trigger the following server event and pass your identification key to it:
 
 alt.emitServer('tslipsync:identifierTransmission', 'John Doe');
+
+## Donate
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=DF9G7JCFMCBA6)
