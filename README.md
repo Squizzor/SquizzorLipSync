@@ -1,7 +1,7 @@
 # GTA5 - alt:V - Teamspeak LipSync
 
 ## IMPORTANT
-If you checkout and compile the source, please make sure to also update the alt:V assembly referenes with nuget to make the resource work with the current alt:V version.
+If you checkout and compile the source, please make sure to also update the alt:V assembly references with nuget to make the resource work with the current alt:V version.
 
 ## About
 This alt:V resource connects to a given Teamspeak server and queries in a specified interval which players are talking right now. It then gives this information further to each talking client and all near by players.
