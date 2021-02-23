@@ -10,6 +10,8 @@ When the client gets those information it starts and stops the lips animation on
 
 **This resource only does the lips animation. For overall voice transmittance you have to use a Teamspeak plugin in addition (e.g. GTA5Voice.net).**
 
+**Also worth to mention is, that there are probably overall better solutions performance-wise for synchronize the lips animation. This is just a really simple way to add this feature to existing setups, where Teamspeak Plugins are used for the overall voice transmittance.**
+
 ## How it works
 The resource uses the Teamspeak Query interface to retrieve all clients on the specified server. It then puts all clients who are talking and in the right channel into a list. 
 
