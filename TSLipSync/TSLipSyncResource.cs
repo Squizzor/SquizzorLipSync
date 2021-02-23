@@ -41,8 +41,6 @@ namespace TSLipSync
         private string TeamspeakPassword { get; set; } = Constants.Settings.Defaults.TeamspeakPassword;
         private string TeamspeakChannel { get; set; } = Constants.Settings.Defaults.TeamspeakChannel;
         private string TeamspeakClientPropertyToCheck { get; set; } = Constants.Settings.Defaults.TeamspeakClientPropertyToCheck;
-        private bool DecodeClientPropertyWithBase64 { get; set; } = Constants.Settings.Defaults.DecodeClientPropertyWithBase64;
-        private bool StripSpacesInClientProperty { get; set; } = Constants.Settings.Defaults.StripSpacesInClientProperty;
         private int CheckIntervalInMs { get; set; } = Constants.Settings.Defaults.CheckIntervalInMs;
         private int SynchronisationRangeInM { get; set; } = Constants.Settings.Defaults.SynchronisationRangeInM;
 
@@ -77,12 +75,6 @@ namespace TSLipSync
                         break;
                     case Constants.Settings.TeamspeakClientPropertyToCheck:
                         TeamspeakClientPropertyToCheck = setting.InnerText;
-                        break;
-                    case Constants.Settings.DecodeClientPropertyWithBase64:
-                        DecodeClientPropertyWithBase64 = Convert.ToBoolean(setting.InnerText);
-                        break;
-                    case Constants.Settings.StripSpacesInClientProperty:
-                        StripSpacesInClientProperty = Convert.ToBoolean(setting.InnerText);
                         break;
                     case Constants.Settings.CheckIntervalInMs:
                         CheckIntervalInMs = Convert.ToInt32(setting.InnerText);
@@ -141,23 +133,6 @@ namespace TSLipSync
             return Math.Sqrt(Math.Pow(position1.X - position2.X, 2) + Math.Pow(position1.Y - position2.Y, 2) + Math.Pow(position1.Z - position2.Z, 2));
         }
 
-        private string GetTransformedTeamspeakClientProperty(string clientProperty)
-        {
-            var finalClientProperty = clientProperty;
-
-            if (DecodeClientPropertyWithBase64)
-            {
-                finalClientProperty = Encoding.UTF8.GetString(Convert.FromBase64String(finalClientProperty));
-            }
-
-            if (StripSpacesInClientProperty)
-            {
-                finalClientProperty = String.Concat(finalClientProperty.Where(c => !Char.IsWhiteSpace(c)));
-            }
-
-            return finalClientProperty.ToLowerInvariant();
-        }
-
         private async Task CheckSpeakingClients()
         {
             Alt.Log("Connecting to Teamspeak...");
@@ -187,7 +162,7 @@ namespace TSLipSync
                     {
                         if (client["client_flag_talking"].ToString() == "1" && client["cid"].ToString() == channelId)
                         {
-                            var clientProperty = GetTransformedTeamspeakClientProperty(client[TeamspeakClientPropertyToCheck].ToString());
+                            var clientProperty = client[TeamspeakClientPropertyToCheck].ToString().ToLowerInvariant();
                             talkingClients.Add(clientProperty);
                         }
                     }

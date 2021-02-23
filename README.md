@@ -55,12 +55,6 @@ The Teamspeak channel that will be checked for talking clients.
 ##### TeamspeakClientPropertyToCheck #####
 This is the Teamspeak client property that will be compared to the specified players identification key ("TsLipSyncIdentifier"). Possible values are for example "client_nickname" or "client_description". See Teamspeak documentation for more possible values.
 
-##### DecodeClientPropertyWithBase64 #####
-If this is set to true the value of the Teamspeak client property will be **decoded** with Base64 before it will be compared to the players identification key.
-
-##### StripSpacesInClientProperty #####
-If this is set to true all spaces in the value of the Teamspeak client property will be stripped out. If **DecodeClientPropertyWithBase64** is also active, the spaces will be stripped out after decoding. 
-
 ##### CheckIntervalInMs #####
 This is the interval in milliseconds in which the resource will query the Teamspeak server for talking clients and inform the players about the talking states.
 A lower value will decrease the latency between speaking and the lip animation, but will also increase the traffic on alt:V and Teamspeak server.

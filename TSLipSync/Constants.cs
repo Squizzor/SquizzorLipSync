@@ -32,8 +32,6 @@ namespace TSLipSync
             public const string TeamspeakPassword = "TeamspeakPassword";
             public const string TeamspeakChannel = "TeamspeakChannel";
             public const string TeamspeakClientPropertyToCheck = "TeamspeakClientPropertyToCheck";
-            public const string DecodeClientPropertyWithBase64 = "DecodeClientPropertyWithBase64";
-            public const string StripSpacesInClientProperty = "StripSpacesInClientProperty";  
             public const string CheckIntervalInMs = "CheckIntervalInMs";
             public const string SynchronisationRangeInM = "SynchronisationRangeInM";
 
@@ -46,8 +44,6 @@ namespace TSLipSync
                 public const string TeamspeakPassword = "";
                 public const string TeamspeakChannel = "Ingame";
                 public const string TeamspeakClientPropertyToCheck = "client_nickname";
-                public const bool DecodeClientPropertyWithBase64 = false;
-                public const bool StripSpacesInClientProperty = false;
                 public const int CheckIntervalInMs = 500;
                 public const int SynchronisationRangeInM = 10;
             }
