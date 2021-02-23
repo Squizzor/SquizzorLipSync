@@ -5,7 +5,7 @@ This alt:V resource connects to a given Teamspeak server and queries in a specif
 
 When the client gets those information it starts and stops the lips animation on the corresponding player.
 
-**This resource only works in combination with a Teamspeak voice plugin (e.g. GTA5Voice.net), which will be used for the overall voice transmittance ingame.**
+**This resource only does the lips animation. For overall voice transmittance you have to use a Teamspeak plugin in addition (e.g. GTA5Voice.net).**
 
 ## How it works
 The resource uses the Teamspeak Query interface to retrieve all clients on the specified server. It then puts all clients who are talking and in the right channel into a list. 
