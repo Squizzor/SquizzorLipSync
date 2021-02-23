@@ -34,7 +34,7 @@ playerObject.setSyncedMeta("TsLipSyncIdentifier", "John Doe");
 ##### Javascript Client
 alt.emitServer('tslipsync:identifierTransmission', 'John Doe');
 
-Now when you have the name "John Doe" in your players meta data and either your nickname or description (depending on the configuration of TeamspeakClientPropertyToCheck) in Teamspeak is also "John Doe", the resource is able to match up the ingame player and the corresponding Teamspeak client.
+Now when you have the name "John Doe" in your players meta data (TsLipSyncIdentifier) and either your nickname or description in Teamspeak (depending on the configuration of TeamspeakClientPropertyToCheck) is also "John Doe", the resource is able to match up the ingame player and the corresponding Teamspeak client.
 
 ## How to use
 
