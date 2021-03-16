@@ -34,9 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AltV.Net" Version="1.48.3" />
-    <PackageReference Include="AltV.Net.Async" Version="1.48.3" />
-    <PackageReference Include="TeamSpeak3QueryApi" Version="1.12.2" />
+    <PackageReference Include="AltV.Net" Version="2.0.0" />
+    <PackageReference Include="AltV.Net.Async" Version="2.0.0" />
+    <PackageReference Include="TeamSpeak3QueryApi" Version="1.13.0" />
   </ItemGroup>
 
 </Project>
