@@ -147,8 +147,16 @@ namespace TSLipSync
             {
                 Alt.Log("Successfully connected to Teamspeak.");
 
-                var channel = await _teamspeakQueryClient.Send("channelfind", new Parameter("pattern", TeamspeakChannel));
-                channelId = channel.First()["cid"].ToString();
+                var foundChannels = await _teamspeakQueryClient.Send("channelfind", new Parameter("pattern", TeamspeakChannel));
+
+                foreach (var channel in foundChannels)
+                {
+                    if (channel["channel_name"].ToString() == TeamspeakChannel)
+                    {
+                        channelId = channel["cid"].ToString();
+                        break;
+                    }
+                }
             }
 
             while (_teamspeakQueryClient.IsConnected)
@@ -160,8 +168,9 @@ namespace TSLipSync
 
                     foreach (var client in clientList)
                     {
-                        if (client["client_flag_talking"].ToString() == "1" && client["cid"].ToString() == channelId)
+                        if (client["client_flag_talking"].ToString() == "1")
                         {
+                            var testStr = client["cid"].ToString() == channelId;
                             var clientProperty = client[TeamspeakClientPropertyToCheck].ToString().ToLowerInvariant();
                             talkingClients.Add(clientProperty);
                         }
