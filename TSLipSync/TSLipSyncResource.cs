@@ -168,9 +168,8 @@ namespace TSLipSync
 
                     foreach (var client in clientList)
                     {
-                        if (client["client_flag_talking"].ToString() == "1")
+                        if (client["client_flag_talking"].ToString() == "1" && client["cid"].ToString() == channelId)
                         {
-                            var testStr = client["cid"].ToString() == channelId;
                             var clientProperty = client[TeamspeakClientPropertyToCheck].ToString().ToLowerInvariant();
                             talkingClients.Add(clientProperty);
                         }
