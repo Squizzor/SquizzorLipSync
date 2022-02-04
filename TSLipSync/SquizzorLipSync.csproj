@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
 	<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
@@ -34,8 +34,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AltV.Net" Version="8.0.0" />
-    <PackageReference Include="AltV.Net.Async" Version="8.0.0" />
+    <PackageReference Include="AltV.Net" Version="9.0.0" />
+    <PackageReference Include="AltV.Net.Async" Version="9.0.0" />
     <PackageReference Include="TeamSpeak3QueryApi" Version="1.13.0" />
   </ItemGroup>
 
